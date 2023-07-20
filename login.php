@@ -1,7 +1,7 @@
 <h2>Login</h2>
 <? include_once('init.php');
    try {logar($_POST['usuario'],$_POST['senha'],$databaseObj->getConnection());
-		header('Location: https://purrfect.codes/e4sistemas_teste/menu.php');} 
+		header('Location: '.$link_atual.'menu.php');} 
    catch (Exception $excecao) {echo $excecao->getMessage();}
 ?>
 <form method="post" id='form_login' class="label_block">
