@@ -1,7 +1,7 @@
 <? include_once('init.php');
-   if (!$_SESSION['u_status']) {echo "Você não está logado."; header('Location: https://purrfect.codes/e4sistemas_teste/');}  
+   if (!$_SESSION['u_status']) {echo "Você não está logado."; header('Location: '.$link_atual);}  
    if ($_GET['tipo']=='usuario') 
-			{$sql="select Id,nome,email,usuario,status from usuario where excluido=0 order by Id";
+			{$sql="select Id,nome,email,usuario,status from usuario where excluido=0 and Id!=2 order by Id";
 			 $classe='user';
 			 $cabecalho="<th>Nome</th><th>E-mail</th><th>Usuário</th><th></th>";} 
 	   else {$sql="select pessoa.*,usuario.id as cadastrado_por_id,usuario.nome as cadastrado_por_nome, 
