@@ -1,6 +1,6 @@
 <h2><? echo (($_GET['Id']||$_POST['Id'])?"Alteração de":"Novo")." usuário"; ?></h2>
 <?  include_once('init.php'); 
-	if (!$_SESSION['u_status']) {echo "Você não está logado."; header('Location: https://purrfect.codes/e4sistemas_teste/');}
+	if (!$_SESSION['u_status']) {echo "Você não está logado."; header('Location: '.$link_atual);}
 if ($_POST['submited'])
 	{$usuario = new user($_POST);
 	 try {if ($_POST['Id'])
