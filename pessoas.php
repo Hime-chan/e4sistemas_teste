@@ -1,5 +1,5 @@
 <? 	include_once('init.php');
-	if (!$_SESSION['u_status']) {echo "Você não está logado."; header('Location: https://purrfect.codes/e4sistemas_teste/');} ?>
+	if (!$_SESSION['u_status']) {echo "Você não está logado."; header('Location: '.$link_atual);} ?>
 <h2>Pessoas</h2>
 <div id='pessoas'>
 <div id='listar_target'><? $_GET['tipo']='pessoa';include('listar.php'); ?></div>
