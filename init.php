@@ -5,7 +5,7 @@ session_start();
 include("classes.php");
 include('exceptions.php');
 include("functions.php");
-$databaseObj = new Database("mysql.purrfect.codes", "purrfect", "E4sistemas", "purrfect");
+$databaseObj = new Database($servidor, $usuario, $senha, $banco);
 $databaseObj->connect();
 $link_atual = "https://purrfect.codes/php_teste/";
 ?>
